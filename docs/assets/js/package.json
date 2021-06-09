@@ -1,0 +1,15 @@
+{
+  "name": "svg-liquid-ball",
+  "version": "1.0.0",
+  "description": "smooth liquid ball based on svg.",
+  "main": "svg-liquid-ball.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "svg",
+    "liquid-ball"
+  ],
+  "author": "charles lu",
+  "license": "ISC"
+}

@@ -1,0 +1,62 @@
+<!doctype html> <html lang=en> <head> <meta charset=UTF-8> <meta name=viewport content="width=device-width,initial-scale=1"> <meta http-equiv=X-UA-Compatible content="ie=edge"> <title>水库水量</title> <style>.reservoir-wapper{display:flex;flex-direction:row;justify-content:center;align-items:center;height:400px}.ball-wapper{text-align:center;position:relative}.ball-wapper h1{font-size:20px;color:rgba(0,0,0,.7)}.ball-wapper p{position:absolute;width:100%;color:#fff;font-weight:700;font-size:55px;margin:90px 0 0 0}</style> </head> <body style=background-color:#eee> <div class=reservoir-wapper> <div class=ball-wapper> <h1>一号水库</h1> <p>90.8%</p> <div id=ball-01></div> </div> <div class=ball-wapper> <h1>二号水库</h1> <p style=color:#ec845e>50%</p> <div id=ball-02></div> </div> <div class=ball-wapper> <h1>三号水库</h1> <p style=color:#f44>13.7%</p> <div id=ball-03></div> </div> <div class=ball-wapper> <h1>四号水库</h1> <div id=ball-04></div> </div> </div> <script> window.onload = () => {
+      const svgLiquidBox1 = new SvgLiquidBox({
+        eleId: 'ball-01',
+        color: '#178BCA',
+        width: 250,
+        waveLength: 150,
+        percent: 90.8,
+        speed: 3,
+        waveStrong: 0.2,
+      })
+
+      const svgLiquidBox2 = new SvgLiquidBox({
+        eleId: 'ball-02',
+        color: 'rgb(241, 197, 181)',
+        width: 250,
+        waveLength: 150,
+        percent: 50,
+        speed: .6,
+        waveStrong: 0.2,
+      })
+
+      const svgLiquidBox3 = new SvgLiquidBox({
+        eleId: 'ball-03',
+        color: 'rgb(255, 68, 68)',
+        width: 250,
+        waveLength: 350,
+        percent: 13.7,
+        speed: 1,
+        waveStrong: 0.2,
+      })
+
+      const svgLiquidBox4 = new SvgLiquidBox({
+        eleId: 'ball-04',
+        color: '#178BCA',
+        width: 250,
+        waveLength: 350,
+        percent: 90.8,
+        speed: 1,
+        waveStrong: 0.2,
+      })
+
+
+      setTimeout(() => {
+        svgLiquidBox4.changeColor('rgb(242, 80, 34)')
+        svgLiquidBox4.changePercent(50)
+
+        setTimeout(() => {
+          svgLiquidBox4.changeColor('rgb(127, 186, 33)')
+          svgLiquidBox4.changePercent(20)
+
+          setTimeout(() => {
+            svgLiquidBox4.changeColor('#00A4EF')
+            svgLiquidBox4.changePercent(70)
+
+            setTimeout(() => {
+              svgLiquidBox4.changeColor('#FFB922')
+              svgLiquidBox4.changePercent(90)
+            }, 2000)
+          }, 2000)
+        }, 2000)
+      }, 2000)
+    } </script> <script type="text/javascript" src="./assets/js/index.ac32758a.js"></script></body> </html>
